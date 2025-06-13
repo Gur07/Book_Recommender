@@ -109,12 +109,6 @@ streamlit run app.py
 ---
 
 
-## 📜 License
-
-This project is open-source and free to use under the [MIT License](LICENSE).
-
----
-
 ### 💡 *“A reader lives a thousand lives before he dies. The man who never reads lives only one.” — George R.R. Martin*
 
 ---
