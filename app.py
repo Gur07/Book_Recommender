@@ -2,23 +2,20 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-# --- Loading Pickle Files ---
 popular_df = pickle.load(open('popular.pkl', 'rb'))
 pt = pickle.load(open('pt.pkl', 'rb'))
 similarity_scores = pickle.load(open('similarity_scores.pkl', 'rb'))
 books = pickle.load(open('books.pkl', 'rb'))
 
-# --- App Title & Header ---
 st.set_page_config(page_title="📚 Book Recommender System", layout='wide')
 st.title("📚 Personalized Book Recommender")
 st.subheader("Helping You Find Your Next Favorite Read!")
 st.markdown("**Made with ❤️ by Me**")
 
-# --- Sidebar ---
+
 st.sidebar.header("Choose Recommendation Mode")
 option = st.sidebar.radio("Select Option:", ['Top 50 Popular Books', 'Collaborative Filtering Recommendation'])
 
-# --- Top 50 Books Section ---
 if option == 'Top 50 Popular Books':
     st.subheader("🌟 Top 50 Most Popular Books")
     
